@@ -461,41 +461,63 @@ header {
     margin-top: 100px;
     margin-bottom: 94px;
   }
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    > img {
-      width: 379px;
-      height: 538px;
-      margin: 0 0 0 152px;
-    }
-
-    > p {
-      position: absolute;
-      font-family: "Plus Jakarta Sans", sans-serif;
-      font-size: 20px;
-      color: #000000;
-      left: -165px;
-      bottom: 36px;
-    }
-  }
 }
 
 .location-grid {
   display: flex;
   > div {
-    justify-content: center;
-    align-items: center;
     display: flex;
-    width: 788px;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    > img {
-      width: 377px;
-      height: 251px;
-    }
+    gap: 20px;
+  }
+}
+
+.Location {
+  display: flex;
+  justify-content: center;
+  width: 1620px;
+  margin: 0 auto;
+  perspective: 1000px; /* <-- ativa o 3D */
+}
+
+.Anuradhapura,
+.Badulla,
+.Jaffna,
+.Kandy,
+.Gampaha {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  > h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    padding: 15px;
+  }
+}
+
+.Colombo {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+
+  > h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    padding: 15px;
+  }
+  > img {
+    width: 379px;
+    height: 538px;
   }
 }
