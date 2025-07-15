@@ -521,3 +521,44 @@ header {
     height: 538px;
   }
 }
+
+.Important-links {
+  margin: auto 153px;
+  > h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 48px;
+    color: #000000;
+    margin: 80px 0;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    > img {
+      width: 879px;
+      height: 599px;
+    }
+
+    > p {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 16px;
+      color: #1c1c1c;
+      margin: 10px 0;
+      > span {
+        color: red;
+        font-weight: bold;
+      }
+    }
+    > h2 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 20px;
+      color: #1c1c1c;
+      font-weight: bold;
+    }
+  }
+}
+
+.Important-links-extra {
+}
