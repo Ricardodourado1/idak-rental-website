@@ -479,28 +479,79 @@ header {
   justify-content: center;
   width: 1620px;
   margin: 0 auto;
-  perspective: 1000px; /* <-- ativa o 3D */
 }
 
+.Jaffna {
+  background-image: url(assets/Jaffna.svg);
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  width: 379px;
+
+  > div {
+    display: flex;
+    position: absolute;
+
+    > h2 {
+      justify-content: flex-end;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+      padding: 15px;
+      position: relative;
+    }
+  }
+}
+
+.Kandy,
+.Colombo,
 .Anuradhapura,
 .Badulla,
-.Jaffna,
-.Kandy,
 .Gampaha {
   display: flex;
   align-items: flex-end;
-  position: relative;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
   will-change: transform;
-  > h2 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: white;
+  cursor: pointer;
+  > div {
+    display: flex;
     position: absolute;
-    padding: 15px;
+
+    > h2 {
+      justify-content: flex-end;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+      padding: 15px;
+      position: relative;
+    }
   }
+}
+
+.Colombo:hover {
+  transform: rotateX(5deg) rotateY(-5deg);
+}
+.Kandy:hover {
+  transform: rotateX(-5deg) rotateY(5deg);
+}
+.Anuradhapura:hover {
+  transform: rotateX(10deg) rotateY(-10deg);
+}
+.Badulla:hover {
+  transform: rotateX(-10deg) rotateY(10deg);
+}
+.Gampaha:hover {
+  transform: rotateX(10deg) rotateY(10deg);
+}
+.Jaffna:hover {
+  transform: rotateX(-10deg) rotateY(-10deg);
 }
 
 .Colombo {
@@ -523,42 +574,97 @@ header {
 }
 
 .Important-links {
-  margin: auto 153px;
   > h1 {
-    display: flex;
-    justify-content: center;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 48px;
-    color: #000000;
-    margin: 80px 0;
+    color: #030303;
+    text-align: center;
+    margin: 50px 0;
   }
 
   > div {
     display: flex;
-    flex-direction: column;
-    > img {
-      width: 879px;
-      height: 599px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+
+    > div {
+      > img {
+        width: 879px;
+        height: 599px;
+      }
+    }
+  }
+
+  > div {
+    > h2 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 24px;
+      color: #030303;
+      margin-bottom: 10px;
     }
 
     > p {
       font-family: "Plus Jakarta Sans", sans-serif;
       font-size: 16px;
-      color: #1c1c1c;
-      margin: 10px 0;
+      color: #494949;
+      margin-bottom: 20px;
+
       > span {
-        color: red;
+        color: #e74c3c;
         font-weight: bold;
       }
-    }
-    > h2 {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      font-size: 20px;
-      color: #1c1c1c;
-      font-weight: bold;
     }
   }
 }
 
+/* Container dos cards menores */
 .Important-links-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  > div {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 450px;
+  }
+
+  > img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+/* Texto do card */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  > span {
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  > h2 {
+    font-size: 16px;
+    color: #000;
+    margin: 4px 0;
+    font-weight: 600;
+  }
+
+  > p {
+    font-size: 14px;
+    color: #1c1c1c;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
 }
