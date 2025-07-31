@@ -674,12 +674,16 @@ header {
 }
 
 footer {
+  margin: 100px 0 0 0;
+  display: flex;
   background-color: #f4f4f4;
+  flex-direction: column;
+  align-items: center;
   > div {
     display: flex;
     padding: 60px;
     justify-content: flex-start;
-    gap: 15em;
+    gap: 12em;
     > div {
       > a {
         color: white;
@@ -713,5 +717,42 @@ footer {
       text-align: center;
       font-weight: bold;
     }
+  }
+}
+
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  > h2 {
+    color: #e74c3c;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  > p {
+    width: 275px;
+    margin: 0;
+  }
+
+  > input {
+    padding: 15px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 47px;
+    width: 100%;
+  }
+
+  > a {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 47px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
   }
 }
